@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name         Krunker.io Hacks for AUGUST | Really Working Krunker Mods
+// @name         DoxyFN's Krunker Hacks for September 14+ - see DoxyFN on GitHub for potential updates.
 // @description  Krunkerio Mods Features: Show FPS, Aim Fire, Auto Bunny, ESP, Adblock, Change Background
-// @version      1.2.3
-// @author       iomods.org
-// @namespace    iomods.org
+// @version      1.0.0
+// @author       DoxyFN
+// @namespace    DoxyFN
 // @match        *://krunker.io/*
 // @grant        none
 // @run-at       document-start
@@ -606,7 +606,7 @@ function patchedScript(script) {
     const build = index.match(/(?<=build=)[^"]+/)[0];
     const patch = index.match(/"SOUND.play\(.+\)">v(.+)</)[1];
     const script = await read(`/js/game.${build}.js`);
-    console.log('Loading Krunker Hero ...');
+    console.log('Loading Doxy Krunk ...');
     window.stop();
     document.open();
     document.write(patchedIndex(index));
@@ -614,8 +614,8 @@ function patchedScript(script) {
     try {
         eval(patchedScript(script));
     } catch (err) {
-        alert("Failed Injecting Script.'OK' to ReLoad.");
+        alert("Failed to inject the script. Hit 'OK' to retry. This will reload your page.");
         location.reload();
     }
-    console.log('Successfully loaded Krunker Hero!');
+    console.log('Successfully loaded Doxy Krunk!');
 })();
